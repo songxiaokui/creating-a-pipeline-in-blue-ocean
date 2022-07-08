@@ -24,5 +24,17 @@ pipeline {
       }
     }
 
+    stage('ACK') {
+      steps {
+        input 'Finished using the web site? (Click "Proceed" to continue)'
+      }
+    }
+
+    stage('Deploy') {
+      steps {
+        sh './jenkins/scripts/deliver.sh'
+      }
+    }
+
   }
 }
