@@ -12,6 +12,7 @@ pipeline {
         sh '''echo "now install application...";
 
 npm install'''
+        sh 'echo "hello world"'
       }
     }
 
